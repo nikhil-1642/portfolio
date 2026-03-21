@@ -18,6 +18,13 @@ import irrigationVid from "./videos/irrigation.mp4";
 import revenueVid from "./videos/revenu.mp4";
 import khl_app from "./videos/klh.mp4";
 import praVid from "./videos/pra.mp4";
+import pra_img from "./pics/pra.png";  
+import khl_img from "./pics/klh.png";
+import annadhaata_img from "./pics/agri.png";
+import whatsapp_img from "./pics/what.png";
+import irrigation_img from "./pics/irri.png";
+import revenue_img from "./pics/revenue.png";
+import app_expo_img from "./pics/app_expo.png";
 /* ═══════════════════════════════════════════════════════════
    DESIGN SYSTEM
    Fonts: Syne (display/headings) + JetBrains Mono (labels/code) + Outfit (body)
@@ -482,6 +489,7 @@ const PROJECTS = [
     gh: "https://github.com/nikhil-1642/annadhaata-agent",
     demo: "https://github.com/nikhil-1642/annadhaata-agent",
     role: "Full Stack ML Developer",
+    img:annadhaata_img,
     overview: "Annadhaata Agent is a comprehensive AI-powered smart agriculture platform engineered to help Indian farmers make data-driven decisions across the full crop lifecycle — from soil analysis to market price insights. Built with a Flask REST API backend and a React.js SPA frontend, backed by a MySQL relational database.",
     features: [
       "Crop recommendation engine using soil parameters and real-time climate data",
@@ -494,34 +502,17 @@ const PROJECTS = [
       "Flask REST API backend · React.js SPA frontend · MySQL relational schema",
     ],
   },
-  {
-    clr: C.sky, icon: "💧",
-    name: "Smart Irrigation System", tag: "IoT + ML Irrigation Prediction",
-    short: "ML system predicting irrigation needs from real-time sensor data with automated Twilio SMS alerts to farmers — reducing water wastage by up to 40%.",
-    tech: ["Python", "Flask", "Machine Learning", "Twilio", "IoT"],
-    gh: "https://github.com/nikhil-1642/smart_irrigation",
-    demo: "https://github.com/nikhil-1642/smart_irrigation",
-    role: "ML Engineer & Backend Developer",
-    video: irrigationVid,
-    overview: "An end-to-end ML system that analyses real-time soil moisture, temperature, and humidity sensor inputs to predict irrigation requirements. Farmers are notified instantly via Twilio SMS, significantly reducing water wastage and manual labour.",
-    features: [
-      "ML classifier trained on soil and weather sensor data with high accuracy",
-      "Real-time Flask REST API for live sensor input ingestion and prediction",
-      "Automated Twilio SMS alerts triggered when irrigation is required",
-      "Lightweight Flask UI for manual data entry and threshold configuration",
-      "Historical data logging and trend analysis dashboard",
-      "Designed for plug-and-play IoT sensor integration at field scale",
-    ],
-  },
+  
   {
     clr: C.amber, icon: "🛵",
-    name: "Flutter Pickle Shop Delivery", tag: "Multi-Role Mobile Delivery App",
+    name: "Multi vendor System", tag: "Multi-Role Mobile Delivery App",
     short: "Cross-platform Flutter app with three distinct dashboards — customer, shop owner, and delivery personnel — featuring live map tracking and order management.",
     tech: ["Flutter", "Dart", "REST APIs", "Python", "Google Maps"],
     gh: "https://github.com/nikhil-1642/flutter",
     demo: "https://github.com/nikhil-1642/flutter",
     role: "Mobile Application Developer",
     video: app_expo_project,
+    img: app_expo_img,
     overview: "A production-grade multi-role Flutter application built for a local pickle business, featuring three distinct dashboards — customer, shop owner, and delivery person — each powered by a Python REST API backend with live map-based tracking.",
     features: [
       "Customer dashboard: product browsing, cart management, order placement & live tracking",
@@ -533,70 +524,12 @@ const PROJECTS = [
     ],
   },
   {
-    clr: C.violet, icon: "💬",
-    name: "WhatsApp Chat Analyzer", tag: "Data Analytics Web Application",
-    short: "Upload any exported WhatsApp chat to get deep analytics — message trends, word frequency clouds, emoji usage stats, and interactive visual charts.",
-    tech: ["Python", "Flask", "Pandas", "Matplotlib", "Plotly"],
-    video: whatsappVid,
-    gh: "https://github.com/nikhil-1642/whatsapp_chat_analysis",
-    demo: "https://github.com/nikhil-1642/whatsapp_chat_analysis",
-    role: "Data Analyst & Backend Developer",
-    overview: "A Flask web application that parses raw exported WhatsApp chat files and generates rich, interactive analytics dashboards. Simply upload a .txt export to instantly visualise message patterns, activity heatmaps, and contributor statistics.",
-    features: [
-      "Parses raw WhatsApp .txt exports with robust Python preprocessing",
-      "Message trend analysis across daily, weekly, and monthly timescales",
-      "Word frequency heatmap and most-used vocabulary visualisation",
-      "Per-user emoji usage statistics, frequency ranking, and emoji clouds",
-      "Most-active user identification and contribution charts for group chats",
-      "Interactive charts built with Matplotlib and Plotly for export-ready visuals",
-    ],
-  },
-  {
-    clr: C.rose, icon: "🛒",
-    name: "E-Commerce Backend API", tag: "Production-Ready Flask REST API",
-    short: "Fully featured Flask e-commerce backend with complete REST APIs for product catalog, cart, orders, and automated Twilio SMS order confirmations.",
-    tech: ["Python", "Flask", "MySQL", "Twilio", "REST API"],
-    gh: "https://github.com/nikhil-1642/prashanth",
-    demo: "https://github.com/nikhil-1642/prashanth",
-    role: "Backend Developer",
-    video: praVid,
-    overview: "A production-grade e-commerce backend built with Flask and MySQL, exposing a complete REST API suite covering every shopping workflow — from product catalog discovery to order fulfilment — with automated SMS notifications on every transaction.",
-    features: [
-      "Full product catalog API with search, filter, sort, and pagination",
-      "Cart management with dynamic quantity updates and price computation",
-      "Order placement, real-time status tracking, and update endpoints",
-      "Secure CRUD operations with comprehensive server-side input validation",
-      "Twilio SMS confirmation dispatched automatically on every order",
-      "Normalised MySQL schema with enforced relational integrity",
-    ],
-  },
-  {
-    clr: "#06b6d4", icon: "📊",
-    name: "Revenue & Customer Ageing", tag: "Power BI Executive Dashboard",
-    short: "Interactive Power BI dashboard delivering revenue trend analysis and customer payment ageing buckets across 3 branches for executive decision-making.",
-    tech: ["Power BI", "DAX", "Power Query", "Excel", "Data Modelling"],
-    video: revenueVid,
-    gh: "https://github.com/nikhil-1642/Revenue-and-Customer-Ageing",
-    demo: "https://github.com/nikhil-1642/Revenue-and-Customer-Ageing",
-    role: "BI Developer & Data Analyst",
-    overview: "An end-to-end Power BI executive dashboard built for an equipment supply company operating across 3 branches. Covers revenue trend analysis and customer payment ageing — enabling prioritisation of overdue accounts and branch-level performance benchmarking.",
-    features: [
-      "Revenue analysis across 3 branches with dynamic time-period filtering",
-      "Customer ageing report with automated overdue payment bucket classification",
-      "Star schema data model built from identified fact and dimension tables",
-      "Custom DAX measures for ageing bucket logic and revenue KPI calculations",
-      "Power Query M transformations for data cleaning, shaping, and merging",
-      "Interactive slicers for branch, customer segment, and date range filtering",
-      "Dynamic visuals: bar charts, matrix tables, trend lines, KPI cards",
-      "Executive-ready layout optimised for C-suite reporting and presentation",
-    ],
-  },
-  {
     clr: "#f97316", icon: "🎫",
     name: "KLH Ticket System", tag: "AI-Powered Customer Support Platform",
     short: "Full-stack support ticket platform with Gemini AI classification, automated email routing to specialist teams, order management, and real-time issue tracking.",
     tech: ["Python", "Flask", "MySQL", "Gemini AI", "React.js", "SMTP"],
     video: khl_app,
+    img:khl_img,
     gh: "https://github.com/nikhil-1642/klh-ticket",
     demo: "https://github.com/nikhil-1642/klh-ticket",
     role: "Full Stack Developer & AI Integration Engineer",
@@ -612,33 +545,92 @@ const PROJECTS = [
       "Session-based authentication with Werkzeug bcrypt password hashing",
     ],
   },
+  {
+    clr: C.violet, icon: "💬",
+    name: "WhatsApp Chat Analyzer", tag: "Data Analytics Web Application",
+    short: "Upload any exported WhatsApp chat to get deep analytics — message trends, word frequency clouds, emoji usage stats, and interactive visual charts.",
+    tech: ["Python", "Flask", "Pandas", "Matplotlib", "Plotly"],
+    video: whatsappVid,
+    img:whatsapp_img,
+    gh: "https://github.com/nikhil-1642/whatsapp_chat_analysis",
+    demo: "https://github.com/nikhil-1642/whatsapp_chat_analysis",
+    role: "Data Analyst & Backend Developer",
+    overview: "A Flask web application that parses raw exported WhatsApp chat files and generates rich, interactive analytics dashboards. Simply upload a .txt export to instantly visualise message patterns, activity heatmaps, and contributor statistics.",
+    features: [
+      "Parses raw WhatsApp .txt exports with robust Python preprocessing",
+      "Message trend analysis across daily, weekly, and monthly timescales",
+      "Word frequency heatmap and most-used vocabulary visualisation",
+      "Per-user emoji usage statistics, frequency ranking, and emoji clouds",
+      "Most-active user identification and contribution charts for group chats",
+      "Interactive charts built with Matplotlib and Plotly for export-ready visuals",
+    ],
+  },
+  {
+    clr: C.rose, icon: "🛒",
+    name: "Nikki Store", tag: "Production-Ready Flask REST API",
+    short: "Fully featured Flask e-commerce backend with complete REST APIs for product catalog, cart, orders, and automated Twilio SMS order confirmations.",
+    tech: ["Python", "Flask", "MySQL", "Twilio", "REST API"],
+    gh: "https://github.com/nikhil-1642/prashanth",
+    demo: "https://github.com/nikhil-1642/prashanth",
+    role: "Backend Developer",
+    video: praVid,
+    img:pra_img,
+    overview: "A production-grade e-commerce backend built with Flask and MySQL, exposing a complete REST API suite covering every shopping workflow — from product catalog discovery to order fulfilment — with automated SMS notifications on every transaction.",
+    features: [
+      "Full product catalog API with search, filter, sort, and pagination",
+      "Cart management with dynamic quantity updates and price computation",
+      "Order placement, real-time status tracking, and update endpoints",
+      "Secure CRUD operations with comprehensive server-side input validation",
+      "Twilio SMS confirmation dispatched automatically on every order",
+      "Normalised MySQL schema with enforced relational integrity",
+    ],
+  },
+  {
+    clr: C.sky, icon: "💧",
+    name: "Smart Irrigation System", tag: "IoT + ML Irrigation Prediction",
+    short: "ML system predicting irrigation needs from real-time sensor data with automated Twilio SMS alerts to farmers — reducing water wastage by up to 40%.",
+    tech: ["Python", "Flask", "Machine Learning", "Twilio", "IoT"],
+    gh: "https://github.com/nikhil-1642/smart_irrigation",
+    demo: "https://github.com/nikhil-1642/smart_irrigation",
+    role: "ML Engineer & Backend Developer",
+    video: irrigationVid,
+    img:irrigation_img,
+    overview: "An end-to-end ML system that analyses real-time soil moisture, temperature, and humidity sensor inputs to predict irrigation requirements. Farmers are notified instantly via Twilio SMS, significantly reducing water wastage and manual labour.",
+    features: [
+      "ML classifier trained on soil and weather sensor data with high accuracy",
+      "Real-time Flask REST API for live sensor input ingestion and prediction",
+      "Automated Twilio SMS alerts triggered when irrigation is required",
+      "Lightweight Flask UI for manual data entry and threshold configuration",
+      "Historical data logging and trend analysis dashboard",
+      "Designed for plug-and-play IoT sensor integration at field scale",
+    ],
+  },
+  {
+    clr: "#06b6d4", icon: "📊",
+    name: "Revenue & Customer Ageing", tag: "Power BI Executive Dashboard",
+    short: "Interactive Power BI dashboard delivering revenue trend analysis and customer payment ageing buckets across 3 branches for executive decision-making.",
+    tech: ["Power BI", "DAX", "Power Query", "Excel", "Data Modelling"],
+    video: revenueVid,
+    img:revenue_img,
+    gh: "https://github.com/nikhil-1642/Revenue-and-Customer-Ageing",
+    demo: "https://github.com/nikhil-1642/Revenue-and-Customer-Ageing",
+    role: "BI Developer & Data Analyst",
+    overview: "An end-to-end Power BI executive dashboard built for an equipment supply company operating across 3 branches. Covers revenue trend analysis and customer payment ageing — enabling prioritisation of overdue accounts and branch-level performance benchmarking.",
+    features: [
+      "Revenue analysis across 3 branches with dynamic time-period filtering",
+      "Customer ageing report with automated overdue payment bucket classification",
+      "Star schema data model built from identified fact and dimension tables",
+      "Custom DAX measures for ageing bucket logic and revenue KPI calculations",
+      "Power Query M transformations for data cleaning, shaping, and merging",
+      "Interactive slicers for branch, customer segment, and date range filtering",
+      "Dynamic visuals: bar charts, matrix tables, trend lines, KPI cards",
+      "Executive-ready layout optimised for C-suite reporting and presentation",
+    ],
+  },
+  
 ];
 
 const INTERNSHIPS = [
-  {
-    clr: C.cyan,
-    role: "Python Full Stack Developer Intern",
-    company: "EduSkills Academy",
-    period: "Apr 2025 – Jun 2025",
-    img: python,
-    pts: [
-      "Architected and delivered full-stack web modules using Python, Flask, React.js, and REST APIs, meeting all sprint deadlines in an Agile environment",
-      "Designed and optimised MySQL relational schemas; improved query performance through indexing and query restructuring",
-      "Produced production-ready, peer-reviewed code with documented APIs and unit test coverage",
-    ],
-  },
-  {
-    clr: "#a78bfa",
-    role: "AI / ML Engineer Intern",
-    company: "EduSkills Academy",
-    period: "2025",
-    img: AI_ML,
-    pts: [
-      "Built and fine-tuned machine learning models for real-world classification and regression tasks using Python, scikit-learn, and TensorFlow",
-      "Designed end-to-end AI pipelines covering data ingestion, feature engineering, model training, evaluation, and inference serving",
-      "Explored deep learning architectures (CNNs, MLPs) and applied them to project-level image and tabular datasets",
-    ],
-  },
   {
     clr: C.violet,
     role: "Software Development Intern — Tech Lead",
@@ -663,6 +655,31 @@ const INTERNSHIPS = [
       "Liaised with cross-functional teams to streamline people operations and improve process turnaround time",
     ],
   },
+  {
+    clr: C.cyan,
+    role: "Python Full Stack Developer Intern",
+    company: "EduSkills Academy",
+    period: "Apr 2025 – Jun 2025",
+    img: python,
+    pts: [
+      "Architected and delivered full-stack web modules using Python, Flask, React.js, and REST APIs, meeting all sprint deadlines in an Agile environment",
+      "Designed and optimised MySQL relational schemas; improved query performance through indexing and query restructuring",
+      "Produced production-ready, peer-reviewed code with documented APIs and unit test coverage",
+    ],
+  },
+  {
+    clr: "#a78bfa",
+    role: "AI / ML Engineer Intern",
+    company: "EduSkills Academy",
+    period: "2025",
+    img: AI_ML,
+    pts: [
+      "Built and fine-tuned machine learning models for real-world classification and regression tasks using Python, scikit-learn, and TensorFlow",
+      "Designed end-to-end AI pipelines covering data ingestion, feature engineering, model training, evaluation, and inference serving",
+      "Explored deep learning architectures (CNNs, MLPs) and applied them to project-level image and tabular datasets",
+    ],
+  },
+  
 ];
 
 const CERTS = [
@@ -890,7 +907,7 @@ function Nav() {
   );
 }
 
-const HERO_ROLES = ["Python Full Stack Developer", "Mobile App Developer", "AI / ML Engineer", "Data Analyst"];
+const HERO_ROLES = ["Python Full Stack Developer", "Mobile App Developer","Java Developer", "AI / ML Engineer", "Data Analyst"];
 
 /* ═══════════════════════════════════════════════════════════
    HERO
@@ -1055,9 +1072,7 @@ function Hero() {
                 <path d="M5 12h14M12 5l7 7-7 7" />
               </svg>
             </BtnP>
-            <BtnO href="mailto:paterinikhil0888@gmail.com">
-              Get In Touch
-            </BtnO>
+           
           </div>
 
           {/* Stats */}
@@ -1512,61 +1527,167 @@ function PCard({ p, i, onOpen }) {
         style={{
           background: hov ? C.bg2 : C.bg1,
           border: `0.5px solid ${hov ? p.clr + "40" : C.border}`,
-          borderRadius: 16, padding: "clamp(1.2rem,2.5vw,1.8rem)",
-          display: "flex", flexDirection: "column", gap: "1rem",
+          borderRadius: 16,
+          display: "flex", flexDirection: "column",
           position: "relative", overflow: "hidden", cursor: "pointer",
         }}>
-        {/* Top accent */}
-        <div style={{
-          position: "absolute", top: 0, left: 0, right: 0, height: 2,
-          background: `linear-gradient(90deg,${p.clr},${p.clr}44)`,
-          opacity: hov ? 1 : 0, transition: "opacity .3s",
-        }} />
 
-        {/* Hover video */}
-        {p.video && (
-          <div style={{
-            position: "absolute", inset: 0, zIndex: 2, pointerEvents: "none",
-            opacity: hov ? 1 : 0, transition: "opacity .4s ease",
-          }}>
-            <video ref={videoRef} src={p.video} muted loop playsInline
-              style={{ width: "100%", height: "100%", objectFit: "cover", display: "block", filter: "brightness(.18) saturate(.5)" }} />
+        <div style={{
+          position: "relative", width: "100%", height: 190,
+          overflow: "hidden", flexShrink: 0,
+          background: `${p.clr}0a`,
+        }}>
+
+          {p.img && (
+            <img
+              src={p.img}
+              alt={p.name}
+              loading="lazy"
+              style={{
+                width: "100%", height: "100%",
+                objectFit: "cover", objectPosition: "top center",
+                display: "block",
+                position: "absolute", inset: 0,
+                transition: "transform .5s cubic-bezier(.22,1,.36,1), opacity .4s ease",
+                transform: hov ? "scale(1.06)" : "scale(1)",
+                opacity: (hov && p.video) ? 0 : 1,
+              }}
+            />
+          )}
+
+          {!p.img && (
             <div style={{
               position: "absolute", inset: 0,
-              background: `linear-gradient(180deg, ${C.bg2}88 0%, ${C.bg2}ee 55%, ${C.bg2} 100%)`,
-            }} />
-          </div>
-        )}
-
-        {/* Card content */}
-        <div style={{ position: "relative", zIndex: 3, display: "flex", flexDirection: "column", gap: "1rem" }}>
-          <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between" }}>
-            <div style={{
-              width: 46, height: 46, borderRadius: 10, background: `${p.clr}12`,
-              border: `0.5px solid ${p.clr}20`,
-              display: "flex", alignItems: "center", justifyContent: "center", fontSize: "1.3rem",
-            }}>{p.icon}</div>
-            <div style={{ display: "flex", gap: 6 }}>
-              <a href={p.gh} target="_blank" rel="noreferrer"
-                onClick={e => e.stopPropagation()} className="picobtn"
-                style={{
-                  width: 30, height: 30, borderRadius: 6, border: `0.5px solid ${C.bord2}`,
-                  display: "flex", alignItems: "center", justifyContent: "center",
-                  fontSize: ".58rem", color: C.muted,
-                  textDecoration: "none", background: "rgba(255,255,255,.03)",
-                  fontFamily: F.mono,
-                }}>GH</a>
+              display: "flex", alignItems: "center", justifyContent: "center",
+              flexDirection: "column", gap: 8,
+            }}>
+              <div style={{
+                position: "absolute", inset: 0,
+                backgroundImage: `
+                  linear-gradient(${p.clr}08 1px, transparent 1px),
+                  linear-gradient(90deg, ${p.clr}08 1px, transparent 1px)
+                `,
+                backgroundSize: "22px 22px",
+              }} />
+              <div style={{
+                fontSize: "2.8rem", position: "relative", zIndex: 1,
+                filter: "drop-shadow(0 4px 12px rgba(0,0,0,.4))",
+              }}>{p.icon}</div>
+              <span style={{
+                fontFamily: F.mono, fontSize: ".55rem",
+                color: `${p.clr}88`, letterSpacing: ".12em",
+                textTransform: "uppercase", position: "relative", zIndex: 1,
+              }}>no preview</span>
             </div>
+          )}
+
+          {p.video && (
+            <video
+              ref={videoRef}
+              src={p.video}
+              muted loop playsInline
+              style={{
+                width: "100%", height: "100%",
+                objectFit: "cover", display: "block",
+                position: "absolute", inset: 0,
+                opacity: hov ? 1 : 0,
+                transition: "opacity .5s ease",
+                filter: "brightness(.2) saturate(.4)",
+              }}
+            />
+          )}
+
+          <div style={{
+            position: "absolute", inset: 0,
+            background: `linear-gradient(
+              180deg,
+              transparent 0%,
+              transparent 40%,
+              ${hov ? C.bg2 : C.bg1}bb 72%,
+              ${hov ? C.bg2 : C.bg1} 100%
+            )`,
+            transition: "background .3s",
+          }} />
+
+          <div style={{
+            position: "absolute", top: 0, left: 0, right: 0, height: 2,
+            background: `linear-gradient(90deg, ${p.clr}, ${p.clr}44)`,
+            opacity: hov ? 1 : 0.45,
+            transition: "opacity .3s",
+          }} />
+
+          <div style={{
+            position: "absolute", bottom: 14, left: 14, zIndex: 2,
+            background: `${C.bg0}dd`, backdropFilter: "blur(12px)",
+            border: `0.5px solid ${p.clr}40`,
+            borderRadius: 4, padding: "4px 10px",
+            display: "flex", alignItems: "center", gap: 7,
+          }}>
+            <span style={{ fontSize: "1rem", lineHeight: 1 }}>{p.icon}</span>
+            <span style={{
+              fontFamily: F.mono, fontSize: ".52rem",
+              color: p.clr, letterSpacing: ".1em", whiteSpace: "nowrap",
+            }}>{p.tag}</span>
           </div>
+
+          <a
+            href={p.gh}
+            target="_blank"
+            rel="noreferrer"
+            onClick={e => e.stopPropagation()}
+            className="picobtn"
+            style={{
+              position: "absolute", top: 12, right: 12, zIndex: 2,
+              width: 30, height: 30, borderRadius: 6,
+              border: `0.5px solid ${C.bord2}`,
+              display: "flex", alignItems: "center", justifyContent: "center",
+              fontSize: ".58rem", color: C.muted,
+              textDecoration: "none",
+              background: `${C.bg0}cc`, backdropFilter: "blur(10px)",
+              fontFamily: F.mono,
+            }}
+          >GH</a>
+
+          {p.video && hov && (
+            <div style={{
+              position: "absolute", top: 12, left: 12, zIndex: 2,
+              background: `${C.bg0}cc`, backdropFilter: "blur(10px)",
+              border: `0.5px solid ${p.clr}40`,
+              borderRadius: 4, padding: "4px 10px",
+              display: "flex", alignItems: "center", gap: 5,
+            }}>
+              <span style={{
+                width: 5, height: 5, borderRadius: "50%",
+                background: p.clr, animation: "pulse-glow 1.5s infinite",
+                display: "inline-block",
+              }} />
+              <span style={{
+                fontFamily: F.mono, fontSize: ".5rem",
+                color: p.clr, letterSpacing: ".1em",
+              }}>LIVE</span>
+            </div>
+          )}
+        </div>
+
+        <div style={{
+          padding: "clamp(.9rem,2vw,1.2rem) clamp(1rem,2vw,1.35rem)",
+          display: "flex", flexDirection: "column", gap: ".7rem", flex: 1,
+        }}>
 
           <div style={{
             fontFamily: F.display, fontWeight: 700,
-            fontSize: "clamp(.94rem,1.8vw,1.1rem)", letterSpacing: "-.02em", color: C.text,
+            fontSize: "clamp(.94rem,1.8vw,1.08rem)",
+            letterSpacing: "-.02em", color: C.text, lineHeight: 1.2,
           }}>{p.name}</div>
 
-          <div style={{ fontFamily: F.mono, fontSize: ".6rem", color: p.clr, letterSpacing: ".08em", marginTop: -8 }}>{p.tag}</div>
-
-          <div style={{ fontFamily: F.body, fontSize: ".84rem", color: C.muted, lineHeight: 1.78 }}>{p.short}</div>
+          <div style={{
+            fontFamily: F.body, fontSize: ".83rem",
+            color: C.muted, lineHeight: 1.78,
+            display: "-webkit-box",
+            WebkitLineClamp: 3,
+            WebkitBoxOrient: "vertical",
+            overflow: "hidden",
+          }}>{p.short}</div>
 
           <div style={{ display: "flex", flexWrap: "wrap", gap: 5, marginTop: "auto" }}>
             {p.tech.map(t => (
@@ -1579,43 +1700,56 @@ function PCard({ p, i, onOpen }) {
           </div>
 
           <div style={{ display: "flex", gap: 7 }}>
-            <button onClick={onOpen} style={{
-              flex: 1, padding: "10px", borderRadius: 8,
-              fontFamily: F.body, fontSize: ".76rem", fontWeight: 600,
-              background: `${p.clr}10`, color: p.clr,
-              border: `0.5px solid ${p.clr}25`, cursor: "pointer", textAlign: "center",
-              transition: "background .2s, border-color .2s",
-            }}
+            <button
+              onClick={onOpen}
+              style={{
+                flex: 1, padding: "10px", borderRadius: 8,
+                fontFamily: F.body, fontSize: ".76rem", fontWeight: 600,
+                background: `${p.clr}10`, color: p.clr,
+                border: `0.5px solid ${p.clr}25`, cursor: "pointer",
+                textAlign: "center", transition: "background .2s, border-color .2s",
+              }}
               onMouseEnter={e => { e.currentTarget.style.background = `${p.clr}20`; e.currentTarget.style.borderColor = `${p.clr}45`; }}
               onMouseLeave={e => { e.currentTarget.style.background = `${p.clr}10`; e.currentTarget.style.borderColor = `${p.clr}25`; }}
             >Details →</button>
 
             {p.video ? (
-              <button onClick={e => { e.stopPropagation(); setShowVideo(true); }} style={{
-                flex: 1, padding: "10px", borderRadius: 8,
-                fontFamily: F.body, fontSize: ".76rem", fontWeight: 600,
-                background: `${p.clr}18`, color: p.clr,
-                border: `0.5px solid ${p.clr}45`, cursor: "pointer",
-                display: "flex", alignItems: "center", justifyContent: "center", gap: 5,
-                transition: "background .2s",
-              }}>▶ Demo</button>
-            ) : (
-              <a href={p.gh} target="_blank" rel="noreferrer" onClick={e => e.stopPropagation()} style={{
-                flex: 1, padding: "10px", borderRadius: 8,
-                fontFamily: F.body, fontSize: ".76rem", fontWeight: 600,
-                background: "rgba(255,255,255,.04)", color: C.muted,
-                border: `0.5px solid ${C.border}`, textDecoration: "none",
-                display: "flex", alignItems: "center", justifyContent: "center",
-              }}>GitHub ↗</a>
+              <button
+                onClick={e => { e.stopPropagation(); setShowVideo(true); }}
+                style={{
+                  flex: 1, padding: "10px", borderRadius: 8,
+                  fontFamily: F.body, fontSize: ".76rem", fontWeight: 600,
+                  background: `${p.clr}18`, color: p.clr,
+                  border: `0.5px solid ${p.clr}45`, cursor: "pointer",
+                  display: "flex", alignItems: "center", justifyContent: "center", gap: 5,
+                  transition: "background .2s",
+                }}
+                onMouseEnter={e => { e.currentTarget.style.background = `${p.clr}28`; }}
+                onMouseLeave={e => { e.currentTarget.style.background = `${p.clr}18`; }}
+              >▶ Demo</button>
+           ) : (
+              <a
+                href={p.gh}
+                target="_blank"
+                rel="noreferrer"
+                onClick={e => e.stopPropagation()}
+                style={{
+                  flex: 1, padding: "10px", borderRadius: 8,
+                  fontFamily: F.body, fontSize: ".76rem", fontWeight: 600,
+                  background: "rgba(255,255,255,.04)", color: C.muted,
+                  border: `0.5px solid ${C.border}`, textDecoration: "none",
+                  display: "flex", alignItems: "center", justifyContent: "center",
+                }}
+              >GitHub ↗</a>
             )}
           </div>
         </div>
       </div>
+
       {showVideo && <VideoModal src={p.video} clr={p.clr} onClose={() => setShowVideo(false)} />}
     </>
   );
 }
-
 /* ═══════════════════════════════════════════════════════════
    EXPERIENCE
 ═══════════════════════════════════════════════════════════ */
